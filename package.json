@@ -20,7 +20,8 @@
   "homepage": "https://github.com/LuizOliveira837/HealthDiet#readme",
   "dependencies": {
     "@types/express": "^4.17.13",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "uuidv4": "^6.2.12"
   },
   "devDependencies": {
     "ts-node-dev": "^1.1.8",
