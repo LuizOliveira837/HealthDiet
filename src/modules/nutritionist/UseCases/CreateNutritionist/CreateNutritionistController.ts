@@ -18,9 +18,9 @@ class CreateNutrionistController{
 
         try {
 
-            this.createNutrionistUseCase.execute({name, birthday, description, email, password, cep})
+            const newUser = this.createNutrionistUseCase.execute({name, birthday, description, email, password, cep})
 
-            return res.status(201).json({name, birthday, description, email, password,cep})
+            return res.status(201).json({newUser})
             
         } catch (error) {
 

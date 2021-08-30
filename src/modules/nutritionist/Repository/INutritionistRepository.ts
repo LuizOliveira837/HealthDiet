@@ -1,3 +1,5 @@
+import { Nutritionist } from "../model/nutritionist";
+
 interface INutritionist{
     id: string;
     name : string;
@@ -14,7 +16,11 @@ interface INutritionistRepository {
 
     findByEmail(email : string): INutritionist;
 
+    findById(id: string): INutritionist;
+
     createNutritionist({name, birthday, description, email, password,cep}):INutritionist;
+
+    deleteNutritionist(nutritionist: Nutritionist): void;
 
     updateDescription(): INutritionist;
 
