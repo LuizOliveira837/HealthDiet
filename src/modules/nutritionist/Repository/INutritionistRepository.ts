@@ -22,7 +22,7 @@ interface INutritionistRepository {
 
     deleteNutritionist(nutritionist: Nutritionist): void;
 
-    updateDescription(): INutritionist;
+    updateDescription(nutritionist : INutritionist,description: string): INutritionist;
 
 
 }

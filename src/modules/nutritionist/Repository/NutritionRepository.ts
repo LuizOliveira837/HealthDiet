@@ -63,10 +63,12 @@ class NutritionistRepository implements INutritionistRepository {
 
         if(!nutritionistWasExcluded) throw new Error("Nutritionist was not excluded")
 
-   
     }
-    updateDescription(): INutritionist {
-        throw new Error("Method not implemented.");
+
+    
+    updateDescription(nutritionist : INutritionist,description: string): INutritionist {
+        nutritionist.description = description
+        return nutritionist 
     }
 
 
