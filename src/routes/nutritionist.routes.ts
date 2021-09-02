@@ -11,6 +11,10 @@ nutritionRoute.post('/create-nutritionist', (req,res)=>{
     createNutrionistController.handle(req, res);
 })
 
+nutritionRoute.get('/get-nutritionist', (req,res)=>{
+    createNutrionistController.handle(req, res);
+})
+
 nutritionRoute.delete('/delete-nutritionist', (req,res)=>{
     deleteNutritionistController.handle(req,res)
 })

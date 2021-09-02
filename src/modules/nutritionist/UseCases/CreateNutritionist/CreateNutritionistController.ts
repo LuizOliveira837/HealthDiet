@@ -20,11 +20,12 @@ class CreateNutrionistController{
 
             const newUser = this.createNutrionistUseCase.execute({name, birthday, description, email, password, cep})
 
-            return res.status(201).json({newUser})
+            return res.status(201).json({name, birthday, description, email, password,cep})
             
         } catch (error) {
 
-            throw new Error(error.message)
+            
+            return res.status(400).json({"Error": error.message})
             
         }
 
