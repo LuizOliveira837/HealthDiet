@@ -1,6 +1,7 @@
 import {Router} from 'express'
 import { createNutrionistController } from '../modules/nutritionist/UseCases/CreateNutritionist';
 import { deleteNutritionistController } from '../modules/nutritionist/UseCases/DeleteNutritionist';
+import { getNutritionistController } from '../modules/nutritionist/UseCases/GetNutritionist';
 import { updateDescripitionController } from '../modules/nutritionist/UseCases/UpdateDescription';
 
 
@@ -11,8 +12,8 @@ nutritionRoute.post('/create-nutritionist', (req,res)=>{
     createNutrionistController.handle(req, res);
 })
 
-nutritionRoute.get('/get-nutritionist', (req,res)=>{
-    createNutrionistController.handle(req, res);
+nutritionRoute.get('/get-nutritionist/:id', (req,res)=>{
+    getNutritionistController.handle(req, res);
 })
 
 nutritionRoute.delete('/delete-nutritionist', (req,res)=>{

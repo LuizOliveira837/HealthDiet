@@ -24,6 +24,7 @@ interface INutritionistRepository {
 
     updateDescription(nutritionist : INutritionist,description: string): INutritionist;
 
+    getById(id:string): INutritionist;
 
 }
 

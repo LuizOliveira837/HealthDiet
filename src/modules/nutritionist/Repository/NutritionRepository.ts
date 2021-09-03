@@ -54,6 +54,8 @@ class NutritionistRepository implements INutritionistRepository {
 
         this.nutritionists.push(nutritionist);
 
+        console.log(nutritionist)
+
         return nutritionist
     }
 
@@ -69,6 +71,16 @@ class NutritionistRepository implements INutritionistRepository {
     updateDescription(nutritionist : INutritionist,description: string): INutritionist {
         nutritionist.description = description
         return nutritionist 
+    }
+
+    getById(id:string): INutritionist{
+
+        const user = this.nutritionists.find(nutritionist=> nutritionist.id === id);
+
+        if(!user) throw new Error("User not exists")
+
+        return user;
+
     }
 
 
